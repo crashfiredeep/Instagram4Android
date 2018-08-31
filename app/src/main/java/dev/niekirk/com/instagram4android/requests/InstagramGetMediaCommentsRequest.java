@@ -30,4 +30,8 @@ public class InstagramGetMediaCommentsRequest extends InstagramGetRequest<Instag
     public InstagramGetMediaCommentsResult parseResult(int resultCode, String content) {
         return parseJson(resultCode, content, InstagramGetMediaCommentsResult.class);
     }
+    
+    public InstagramGetMediaCommentsRequest(long mediaId) {
+        this.mediaId = mediaId;
+    }
 }
